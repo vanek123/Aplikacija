@@ -1,5 +1,5 @@
 body {
-    background-color:darkseagreen;
+    background-color:lightgreen;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -22,4 +22,26 @@ h1 {
     width: 200px;
     height: 50px;
     font-size: 20px;
+    background-color:rgb(47, 231, 161);
+    border-radius: 10px;
+    outline: none;
+}
+
+#popUp {
+    display: none;
+    position: fixed;
+    font-size: 25px;
+    z-index: 1;
+    background-color:lightblue;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+}
+
+#form {
+    background-color:lightyellow;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    width: 23%;
 }
