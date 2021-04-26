@@ -1,6 +1,12 @@
 const POP_UP = document.getElementById('popUp');
 let uzdevumi = [];
 
+window.addEventListener('load', () => {
+    uzdevumi = JSON.parse(localStorage.getItem("uzdevumi") || "[]");
+    console.log(uzdevumi)
+    render();
+});
+
 document.getElementById('pievienotSarakstam').addEventListener('click', () => {
     POP_UP.style.display = 'block';
 
@@ -19,7 +25,6 @@ document.getElementById('pievienotUzdevumu').addEventListener('click', () => {
     render();
 })
 
-
 function render() {
     let list = document.getElementById('list');
     list.innerHTML = "";
@@ -34,7 +39,7 @@ function render() {
         list.innerHTML += uzdevums1;
     }
 
-
+    localStorage.setItem("uzdevumi", JSON.stringify(uzdevumi))
 }
 
 
