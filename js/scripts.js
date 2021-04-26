@@ -1,9 +1,40 @@
-console.log("JavaScripit is working!")
+const POP_UP = document.getElementById('popUp');
+let uzdevumi = [];
 
 document.getElementById('pievienotSarakstam').addEventListener('click', () => {
-    console.log("Poga nospiesta!");
+    POP_UP.style.display = 'block';
 
-    let popUp = document.getElementById('popUp');
-    
-    popUp.style.display = 'block'
 })
+
+document.getElementById('pievienotUzdevumu').addEventListener('click', () => {
+    POP_UP.style.display = 'none';
+
+    let uzdevums1 = {uzdevums: uzdevums.value, termins: termins.value};
+
+    uzdevums.value = "";
+    termins.value = "";
+    
+    uzdevumi.push(uzdevums1);
+
+    render();
+})
+
+
+function render() {
+    let list = document.getElementById('list');
+    list.innerHTML = "";
+
+    for(let i = 0; i < uzdevumi.length; i++) {
+        let uzdevums1 = `
+        <div class="uzdevums2">
+            <h3>Uzdevums: ${uzdevumi[i].uzdevums}</h3>
+            <h4>Termiņš: ${uzdevumi[i].termins}</h4>
+        </div>`;
+
+        list.innerHTML += uzdevums1;
+    }
+
+
+}
+
+
