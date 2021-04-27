@@ -94,5 +94,11 @@ input#termins {
     width: 220px;
     padding: 15px;
     margin: 20px;
-    background-color:floralwhite;
+    background: fixed linear-gradient(to bottom, lightblue, cornflowerblue);
+}
+
+#dzestUzdevumu {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
 }

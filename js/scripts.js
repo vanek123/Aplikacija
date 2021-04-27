@@ -34,12 +34,16 @@ function render() {
         <div class="uzdevums2">
             <h3>Uzdevums: ${uzdevumi[i].uzdevums}</h3>
             <h4>Termiņš: ${uzdevumi[i].termins}</h4>
+            <button id="dzestUzdevumu">Dzēst</button>
         </div>`;
 
         list.innerHTML += uzdevums1;
     }
 
     localStorage.setItem("uzdevumi", JSON.stringify(uzdevumi))
+
+     dzestUzdevumu = document.getElementById('dzestUzdevumu');
 }
+
 
 
